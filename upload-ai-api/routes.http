@@ -5,14 +5,16 @@ GET http://localhost:3333/prompts
 
 # @name upload
 POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/dsaj1eud913j199812je12j9/transcription
+POST http://localhost:3333/videos/04919e81-a9d5-479f-83b4-a4aa09683680/transcription
 Content-Type: application/json
+
 {
-    "prompt": "clean arch, ddd"
+  "prompt": "clean architecture, ddd"
 }
 
 ###
@@ -23,6 +25,6 @@ Content-Type: application/json
 {
     "videoId": "dsaj1eud913j199812je12j9",
     "temperature": 0.5,
-    "template": "Gere um resumo sucinto da trancrição do vídeo informada a seguir: '''{transcription}'''"
+    "prompt": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
 }
 

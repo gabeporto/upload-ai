@@ -19,6 +19,7 @@ export async function getFFmpeg() {
             wasmURL,
             workerURL,
           });
+          
     }
 
     return ffmpeg
